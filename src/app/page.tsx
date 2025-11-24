@@ -34,49 +34,59 @@ export default function LandingPage() {
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-orange-500/5 to-transparent rounded-full"></div>
             </div>
 
-            {/* Navigation */}
-            <nav className="fixed top-0 w-full z-50 backdrop-blur-2xl bg-black/30 border-b border-white/5 shadow-2xl">
-                <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                        <div
-                            className="relative w-10 h-10 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/25">
-                            <Radio className="w-6 h-6 text-white"/>
-                            <div
-                                className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 rounded-xl blur opacity-50 -z-10"></div>
-                        </div>
-                        <span
-                            className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                            Qolt
-                        </span>
-                    </div>
-                    <div className="hidden md:flex items-center space-x-8">
-                        <button
-                            onClick={() => document.getElementById("features")?.scrollIntoView({behavior: "smooth"})}
-                            className="text-gray-300 hover:text-orange-400 transition-all duration-300 relative group"
-                        >
-                            Features
-                            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 group-hover:w-full transition-all duration-300"></div>
-                        </button>
-                        <button
-                            onClick={() => document.getElementById("how-it-works")?.scrollIntoView({behavior: "smooth"})}
-                            className="text-gray-300 hover:text-orange-400 transition-all duration-300 relative group"
-                        >
-                            How It Works
-                            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 group-hover:w-full transition-all duration-300"></div>
-                        </button>
-                        <Button
-                            variant="outline"
-                            className="relative border-orange-500/50 text-orange-400 hover:bg-orange-500/10 hover:border-orange-400 hover:text-orange-400 backdrop-blur-xl bg-white/5 transition-all duration-300 shadow-lg shadow-orange-500/10"
-                            onClick={() => document.getElementById("cta")?.scrollIntoView({behavior: "smooth"})}
-                        >
-                            Get Started
-                            <div className="absolute inset-0 rounded-md bg-gradient-to-r from-orange-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                        </Button>
-                    </div>
+          {/* Navigation */}
+          <nav className="fixed top-0 w-full z-50 backdrop-blur-2xl bg-black/30 border-b border-white/5 shadow-2xl">
+            <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <div
+                  className="relative w-10 h-10 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/25">
+                  <Radio className="w-6 h-6 text-white" />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 rounded-xl blur opacity-50 -z-10"></div>
                 </div>
-            </nav>
+                <span
+                  className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Qolt
+      </span>
+              </div>
+              <div className="hidden md:flex items-center space-x-8">
+                <button
+                  onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
+                  className="text-gray-300 hover:text-orange-400 transition-all duration-300 relative group"
+                >
+                  Features
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 group-hover:w-full transition-all duration-300"></div>
+                </button>
+                <button
+                  onClick={() => document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" })}
+                  className="text-gray-300 hover:text-orange-400 transition-all duration-300 relative group"
+                >
+                  How It Works
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 group-hover:w-full transition-all duration-300"></div>
+                </button>
 
-            {/* Hero Section */}
+                {/* NEW: link to Android app progress page */}
+                <Link
+                  href="/android-app"
+                  className="text-gray-300 hover:text-orange-400 transition-all duration-300 relative group"
+                >
+                  Android App Progress
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 group-hover:w-full transition-all duration-300"></div>
+                </Link>
+
+                <Button
+                  variant="outline"
+                  className="relative border-orange-500/50 text-orange-400 hover:bg-orange-500/10 hover:border-orange-400 hover:text-orange-400 backdrop-blur-xl bg-white/5 transition-all duration-300 shadow-lg shadow-orange-500/10"
+                  onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Get Started
+                  <div className="absolute inset-0 rounded-md bg-gradient-to-r from-orange-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                </Button>
+              </div>
+            </div>
+          </nav>
+
+          {/* Hero Section */}
             <section className="relative pt-32 pb-20 px-4 z-10">
                 <div className="container mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
