@@ -9,6 +9,7 @@ import {
   CheckCircle2,
   Rocket,
   ArrowLeft,
+  Github,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -74,6 +75,30 @@ export default function AndroidAppProgressPage() {
             <Badge className="bg-gradient-to-r from-orange-500/20 to-purple-500/20 text-orange-300 border border-orange-500/30 backdrop-blur-xl px-4 py-1">
               Internal Progress Demo
             </Badge>
+
+            <div className="flex items-center space-x-2">
+              <Link
+                href="https://github.com/GooseMooz/Qolt-Android"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button className="border border-orange-500/50 text-orange-100 hover:bg-orange-500/10 hover:border-orange-400 hover:text-orange-50 backdrop-blur-xl bg-white/5 transition-all duration-300 flex items-center gap-2">
+                  <Github className="w-4 h-4" />
+                  App GitHub
+                </Button>
+              </Link>
+              <Link
+                href="https://github.com/antonkazachenko/qolt-landing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button className="border border-purple-500/50 text-purple-100 hover:bg-purple-500/10 hover:border-purple-400 hover:text-purple-50 backdrop-blur-xl bg-white/5 transition-all duration-300 flex items-center gap-2">
+                  <Github className="w-4 h-4" />
+                  Website GitHub
+                </Button>
+              </Link>
+            </div>
+
             <Link href="/">
               <Button
                 variant="outline"
@@ -204,8 +229,8 @@ export default function AndroidAppProgressPage() {
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 mt-1 text-orange-400" />
                     <span>
-                      Implemented NFC tag scanning and app blocking feature; API design
-                      is drafted for app blocking logic.
+                      Implemented NFC tag scanning and app blocking feature; API
+                      design is drafted for app blocking logic.
                     </span>
                   </li>
                 </ul>
