@@ -30,6 +30,14 @@ const MILESTONES = [
     status: "Completed",
     description:
       "Built login, onboarding, and main dashboard screens with placeholder data and navigation.",
+  },
+  {
+    title: "All of the Screens work and polished",
+    icon: Rocket,
+    date: "Part 3 (Final)",
+    status: "Completed",
+    description:
+      "Finish and Polish Onboarding/Login, Home, Presets, Statistics, Profile pages.",
   }
 ]
 
