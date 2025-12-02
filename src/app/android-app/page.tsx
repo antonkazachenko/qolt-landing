@@ -10,6 +10,7 @@ import {
   Rocket,
   ArrowLeft,
   Github,
+  ExternalLink,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -33,19 +34,20 @@ const MILESTONES = [
   {
     title: "Backend & Analytics Integration",
     icon: Rocket,
-    date: "Part 3",
-    status: "Planned",
+    date: "Part 3 (Final)",
+    status: "Completed",
     description:
       "Connect to backend API, add real-time data, and integrate analytics for user behavior tracking.",
   },
 ]
 
-const NEXT_STEPS = [
-  "Finish and polish UI/UX of the app",
-  "Optimization and error fallbacks",
-  "Hookup auth and statistics collection to the backend",
-  "Develop multiple statistics gathering features",
-]
+const DELIVERY_LINKS = {
+  pitch: "https://drive.google.com/file/d/12u7ffLworH0qTEeEYHr9BCwKnNsBEkps/view?usp=sharing", // Original pitch link stub
+  apk: "#", // APK link stub
+  designSlide: "#", // Threaded design diagram single slide stub
+  presentationVideo: "#", // Presentation video stub
+  finalZip: "https://drive.google.com/file/d/1rm13RXh9cmv4IRLl5X1Ic3Y_vS9dc0Aa/view?usp=sharing", // Final project ZIP stub
+}
 
 export default function AndroidAppProgressPage() {
   return (
@@ -127,16 +129,10 @@ export default function AndroidAppProgressPage() {
               </span>
               <br />
               <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent relative">
-                Current Status & Next Steps
+                Current Status
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 blur-2xl opacity-20 -z-10" />
               </span>
             </h1>
-
-            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              This page summarizes the work completed so far on the Android
-              application, what is currently in progress, and what we plan to
-              deliver next for upcoming demos.
-            </p>
           </section>
 
           {/* Milestones */}
@@ -196,63 +192,78 @@ export default function AndroidAppProgressPage() {
             </div>
           </section>
 
-          {/* Current Focus / Next Steps */}
-          <section className="grid md:grid-cols-[3fr,2fr] gap-8 items-start">
-            <Card className="relative backdrop-blur-3xl bg-gradient-to-br from-white/10 via-white/5 to-white/10 border border-white/20 rounded-3xl shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-purple-500/5 rounded-3xl" />
-              <div className="absolute -inset-1 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-3xl blur opacity-40" />
-              <div className="relative p-8 space-y-4">
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-                  Current Build Focus
-                </h3>
-                <p className="text-sm md:text-base text-gray-200 leading-relaxed">
-                  Right now we are focusing on stabilizing the navigation
-                  between core screens, wiring up the authentication flow, and
-                  preparing the app for an internal demo build that can be
-                  installed on devices.
-                </p>
-                <ul className="space-y-3 text-sm text-gray-200">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 mt-1 text-orange-400" />
-                    <span>
-                      Login, onboarding, and dashboard screens are implemented
-                      with placeholder data.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 mt-1 text-orange-400" />
-                    <span>
-                      Navigation graph is set up and supports the planned user
-                      flows.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 mt-1 text-orange-400" />
-                    <span>
-                      Implemented NFC tag scanning and app blocking feature; API
-                      design is drafted for app blocking logic.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </Card>
+          {/* Final Delivery */}
+          <section className="space-y-6">
+            <div className="flex items-center justify-between gap-4">
+              <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                Final Delivery & Links
+              </h2>
+              <Badge className="bg-emerald-500/15 text-emerald-200 border border-emerald-500/40">
+                Final Step Done
+              </Badge>
+            </div>
 
-            <Card className="relative backdrop-blur-xl bg-white/5 border-white/15 shadow-2xl">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-white flex items-center gap-2">
-                  Next Steps
-                  <Rocket className="w-5 h-5 text-orange-400" />
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <ul className="space-y-2 text-sm text-gray-300">
-                  {NEXT_STEPS.map((step) => (
-                    <li key={step} className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-orange-400" />
-                      <span>{step}</span>
-                    </li>
-                  ))}
-                </ul>
+            <Card className="relative backdrop-blur-xl bg-white/5 border-white/10 shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-orange-500/5 rounded-2xl" />
+              <CardContent className="relative p-8 space-y-6">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-4 text-gray-200">
+                    <h3 className="text-xl font-semibold text-white">Deliverable Links</h3>
+                    <div className="space-y-3">
+                      {[
+                        { label: "Original pitch link", href: DELIVERY_LINKS.pitch },
+                        { label: "App APK here", href: DELIVERY_LINKS.apk },
+                        {
+                          label: "Threaded design diagram (single-slide deck)",
+                          href: DELIVERY_LINKS.designSlide,
+                        },
+                        { label: "Presentation video", href: DELIVERY_LINKS.presentationVideo },
+                        { label: "Final project ZIP", href: DELIVERY_LINKS.finalZip },
+                      ].map((item) => (
+                        <Button
+                          key={item.label}
+                          asChild
+                          className="w-full justify-between bg-white/10 hover:bg-white/20 text-white border border-emerald-400/40"
+                        >
+                          <Link href={item.href} target="_blank" rel="noreferrer" className="flex w-full items-center justify-between gap-2">
+                            <span>{item.label}</span>
+                            <ExternalLink className="w-4 h-4 text-emerald-300" />
+                          </Link>
+                        </Button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 text-gray-200">
+                    <h3 className="text-xl font-semibold text-white">Team Effort Breakdown</h3>
+                    <ul className="space-y-2 text-sm md:text-base">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-1 text-emerald-400" />
+                        <span>
+                          <span className="font-semibold text-white">Timofey Zhuchkov:</span> NFC features and UI/UX polish.
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-1 text-emerald-400" />
+                        <span>
+                          <span className="font-semibold text-white">Mykhailo Isyp:</span> Presets tab and overall project organization.
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-1 text-emerald-400" />
+                        <span>
+                          <span className="font-semibold text-white">Anton Kazachenko &amp; Dyk Kyong Do:</span> Statistics tab and its widgets, project website.
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-1 text-emerald-400" />
+                        <span>
+                          <span className="font-semibold text-white">Franklin Au:</span> Onboarding and profile/settings screens.
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </section>
