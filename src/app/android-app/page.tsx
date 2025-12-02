@@ -37,7 +37,7 @@ const DELIVERY_LINKS = {
   pitch: "https://docs.google.com/presentation/d/1g6cnLyJfqdjM8U0givZs8XFMSbSmiat6PKPPypKhJcI/edit?usp=sharing", // Original pitch link stub
   apk: "https://drive.google.com/file/d/12u7ffLworH0qTEeEYHr9BCwKnNsBEkps/view?usp=sharing", // APK link stub
   designSlide: "https://docs.google.com/presentation/d/1t-lY9bOj5L0sjpuWAIGrJb7BQsqDYxXjPPgU2rAq1B8/edit?usp=sharing", // Threaded design diagram single slide stub
-  presentationVideo: "https://drive.google.com/file/d/1Sc9l2NsQxw0oNfkHtNqUWgz4SX-H2Vsl/view?usp=drive_link", // Presentation video stub
+  presentationVideo: "https://drive.google.com/file/d/1Sc9l2NsQxw0oNfkHtNqUWgz4SX-H2Vsl/view?usp=sharing", // Presentation video stub
   finalZip: "https://drive.google.com/file/d/1pwVPnG2pEPWvkGYZocao-FuoF-zBCF1q/view?usp=sharing", // Final project ZIP stub
 }
 
